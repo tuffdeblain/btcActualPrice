@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		C533C7B926BF1E8C00877544 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533C7B826BF1E8C00877544 /* AppDelegate.swift */; };
 		C533C7BB26BF1E8C00877544 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533C7BA26BF1E8C00877544 /* SceneDelegate.swift */; };
-		C533C7BD26BF1E8C00877544 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533C7BC26BF1E8C00877544 /* ViewController.swift */; };
+		C533C7BD26BF1E8C00877544 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533C7BC26BF1E8C00877544 /* PriceViewController.swift */; };
 		C533C7C026BF1E8C00877544 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C533C7BE26BF1E8C00877544 /* Main.storyboard */; };
 		C533C7C226BF1E8D00877544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C533C7C126BF1E8D00877544 /* Assets.xcassets */; };
 		C533C7C526BF1E8D00877544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C533C7C326BF1E8D00877544 /* LaunchScreen.storyboard */; };
+		C533C7D226BF1F3E00877544 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533C7D126BF1F3E00877544 /* Currency.swift */; };
+		C533C7D426BF22D400877544 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C533C7D326BF22D400877544 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C533C7B526BF1E8C00877544 /* btcActualPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = btcActualPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C533C7B826BF1E8C00877544 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C533C7BA26BF1E8C00877544 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C533C7BC26BF1E8C00877544 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C533C7BC26BF1E8C00877544 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		C533C7BF26BF1E8C00877544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C533C7C126BF1E8D00877544 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C533C7C426BF1E8D00877544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C533C7C626BF1E8D00877544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C533C7D126BF1F3E00877544 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		C533C7D326BF22D400877544 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = btcActualPrice/DataManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		C533C7B726BF1E8C00877544 /* btcActualPrice */ = {
 			isa = PBXGroup;
 			children = (
-				C533C7B826BF1E8C00877544 /* AppDelegate.swift */,
-				C533C7BA26BF1E8C00877544 /* SceneDelegate.swift */,
-				C533C7BC26BF1E8C00877544 /* ViewController.swift */,
-				C533C7BE26BF1E8C00877544 /* Main.storyboard */,
-				C533C7C126BF1E8D00877544 /* Assets.xcassets */,
-				C533C7C326BF1E8D00877544 /* LaunchScreen.storyboard */,
-				C533C7C626BF1E8D00877544 /* Info.plist */,
+				C533C7CC26BF1EBA00877544 /* Models */,
+				C533C7CF26BF1EF600877544 /* Services */,
+				C533C7CE26BF1ECE00877544 /* ViewControllers */,
+				C533C7D026BF1F0800877544 /* Storyboards */,
+				C533C7CD26BF1EC500877544 /* Resources */,
+				C533C7D326BF22D400877544 /* DataManager.swift */,
 			);
 			path = btcActualPrice;
+			sourceTree = "<group>";
+		};
+		C533C7CC26BF1EBA00877544 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C533C7D126BF1F3E00877544 /* Currency.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C533C7CD26BF1EC500877544 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C533C7C126BF1E8D00877544 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C533C7CE26BF1ECE00877544 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C533C7BC26BF1E8C00877544 /* PriceViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C533C7CF26BF1EF600877544 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C533C7B826BF1E8C00877544 /* AppDelegate.swift */,
+				C533C7BA26BF1E8C00877544 /* SceneDelegate.swift */,
+				C533C7C626BF1E8D00877544 /* Info.plist */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C533C7D026BF1F0800877544 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C533C7C326BF1E8D00877544 /* LaunchScreen.storyboard */,
+				C533C7BE26BF1E8C00877544 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C533C7BD26BF1E8C00877544 /* ViewController.swift in Sources */,
+				C533C7D226BF1F3E00877544 /* Currency.swift in Sources */,
+				C533C7D426BF22D400877544 /* DataManager.swift in Sources */,
+				C533C7BD26BF1E8C00877544 /* PriceViewController.swift in Sources */,
 				C533C7B926BF1E8C00877544 /* AppDelegate.swift in Sources */,
 				C533C7BB26BF1E8C00877544 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 754D6797UK;
-				INFOPLIST_FILE = btcActualPrice/Info.plist;
+				INFOPLIST_FILE = btcActualPrice/Services/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sergeiKudinov.btcActualPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 754D6797UK;
-				INFOPLIST_FILE = btcActualPrice/Info.plist;
+				INFOPLIST_FILE = btcActualPrice/Services/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sergeiKudinov.btcActualPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
